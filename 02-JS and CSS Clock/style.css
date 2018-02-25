@@ -1,0 +1,81 @@
+html{
+ 
+  font-family: 'heletica neue';
+  text-align: center;
+  font-size: 10px;
+}
+
+body{
+  margin: 0;
+  font-size: 2rem;
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.clock{
+  background: url(https://cssanimation.rocks/images/posts/clocks/ios_clock.svg)no-repeat center;
+  /* background-color: #fff; */
+  /* background-size: cover; */
+  width: 30rem;
+  height: 30rem;
+  border-radius: 60%;
+  margin: 0.5rem auto;
+  position: relative;
+  padding: 2rem;
+  
+}
+.clock-face{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-3px);
+}
+
+.clock-face::after{
+  content: '';
+  width: 1.5rem;
+  height: 1.5rem;
+  background: red;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 10;
+
+}
+
+.hand{
+  width: 50%;
+  height: .6rem;
+  background: black;
+  position: absolute;
+  top: 50%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition:  1s;
+  /* animation: rotate-second 60s linear infinite; */
+  /* transition-timing-function: cubic-bezier(0.12,2.7,0.58,1) */
+  transition-timing-function: cubic-bezier(0.45, 0.43, 0.59, 0.6);
+}
+
+.hour-hand{
+  width: 30%;
+  margin-left: 20%;
+}
+.min-hand{
+  width: 40%;
+  margin-left: 10%
+}
+.second-hand{
+  background: #000;
+  height: 45%;
+  left: 49.5%;
+  position: absolute;
+  top: 14%;
+  transform-origin: 50% 80%;
+  width: 1%;
+  z-index: 8;
+}
